@@ -6,8 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
         genCards(); //Generates card deck
+        Game game = new Game();
+        game.play(3);
+        game.play(7);
+        game.play(13);
+
     }
 
+    public static Card[] getDeck(){
+        return deck;
+    }
     private static void genCards(){
         String[] faces = {"Star", "Heart", "Spade", "Clubs", "Diamond"};
         int deckIndex = 0;
